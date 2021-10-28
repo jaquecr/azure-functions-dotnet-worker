@@ -244,7 +244,6 @@ namespace Microsoft.Azure.Functions.Worker
 
             try
             {
-                // we need to get a list of items of type "FunctionLoadRequests" which has a field RpcFunctionMetadata
                 var functionMetadata = GetFunctionLoadRequests(directory);
 
                 for (int i = 0; i < functionMetadata.Count; i++)
