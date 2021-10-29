@@ -76,7 +76,7 @@ message StreamingMessage {
     CloseSharedMemoryResourcesRequest close_shared_memory_resources_request = 27;
     CloseSharedMemoryResourcesResponse close_shared_memory_resources_response = 28;
 
-     // Worker Indexing message types
+    // Worker indexing message types
     FunctionsMetadataRequest functions_metadata_request = 29;
     FunctionMetadataResponses function_metadata_responses = 30;
   }
@@ -284,10 +284,10 @@ message FunctionsMetadataRequest {
 // Worker sends function metadata back to host
 message FunctionMetadataResponses {
   // list of function indexing responses
-  repeated FunctionLoadRequest results = 1;
+  repeated FunctionLoadRequest function_load_requests_results = 1;
 
   // status of overall metadata request
-  StatusResult overall_status = 2;
+  StatusResult result = 2;
 }
 
 // Host requests worker to invoke a Function
