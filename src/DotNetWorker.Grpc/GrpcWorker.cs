@@ -149,7 +149,7 @@ namespace Microsoft.Azure.Functions.Worker
             await _outputWriter.WriteAsync(responseMessage);
         }
 
-    internal static async Task<InvocationResponse> InvocationRequestHandlerAsync(InvocationRequest request, IFunctionsApplication application,
+        internal static async Task<InvocationResponse> InvocationRequestHandlerAsync(InvocationRequest request, IFunctionsApplication application,
             IInvocationFeaturesFactory invocationFeaturesFactory, ObjectSerializer serializer, IOutputBindingsInfoProvider outputBindingsInfoProvider)
         {
             FunctionContext? context = null;
